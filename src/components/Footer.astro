@@ -1,0 +1,27 @@
+---
+import footer_logo from '../images/footer_logo.png';
+import watermark from '../images/watermark.png';
+
+const { email } = Astro.props;
+---
+<section id='footer' class="" >
+
+  <div class="h-[260px] p-6 px-12
+  bg-[#263A40] bg-[url('./src/images/watermark.png')] bg-no-repeat bg-center
+  text-[#E9F6FA]  ">
+    
+    <div id='footer-logo'class="
+       
+        ">
+        <img src={footer_logo} alt="white_hero_logo " 
+          />
+    </div>
+
+    <div class="flex justify-between text-xl font-light px-3">
+      <div id='footer-location' class="">Located in Calgary, AB, Canada</div>
+      <div id='footer-email '>
+        <a href={`mailto:${email}`} class="hover:underline hover:text-[#a8e0d4]" > {email}</a>
+      </div>
+    </div>
+  </div>
+</section>

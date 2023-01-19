@@ -1,0 +1,154 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Footer from '../components/Footer.astro';
+import Card from '../components/Card.astro';
+import bg from '../images/bg.png';
+import white_hero_logo from '../images/white_hero_logo.png';
+import sachet from '../images/sachet.png';
+import pinkHeart from '../images/pinkHeart.png';
+import workers_1 from '../images/workers_1.png';
+import workers_2 from '../images/workers_2.png';
+import workers_3 from '../images/workers_3.png';
+import workers_4 from '../images/workers_4.png';
+
+const emailAddress = 'hello@madebymum.me'
+---
+
+<!-- p-3 = 12px 
+p-4 = 16px
+p-6 = 24px 
+p-9 = 36px
+p-12 = 48px -->
+
+<!-- Pink - e4bdb2
+Med green- 366656
+Teal - b9d1cc
+Light teal - d2e5d9
+Navy -263c44 -->
+
+<Layout title="made by Mum">
+	<main >
+		<section  id='hero' class="bg-hero bg-cover h-[732px] 	" >
+			<div id='hero-logo'class="
+				flex justify-center items-center
+				pt-12 w-full
+				">
+				<img src={white_hero_logo} alt="white_hero_logo " 
+					/>
+			</div>
+
+			<div id='hero-content' class="flex">
+				<div id='hero-sachet' class="h-[490px] w-1/3 ml-12 mt-12" >
+					<img src={sachet} alt="sachet" class="w-full h-full " />
+				</div>
+
+				<div id='hero-texts' class="w-2/3 pl-9" >
+					<div id='hero-tagline' class="text-4xl font-bold 
+							mt-12 
+							flex" >
+						<div
+							class=" text-white mt-16"
+							>
+							<h1 id='hero' class="text-6xl tracking-widest">Freeze Dried with</h1> 
+						</div>
+						<img src={pinkHeart} alt="white_hero_logo " class="w-[120px] ml-3 mt-6"/>
+					</div>	
+					<div class="text-[#D2E5D9] text-xl w-[550px] ">
+						Your breast milk or your baby food!  Simply add water to reconstitute. 
+						Take it anywhere or give it family members or child-care, so that your baby can 
+						always have the very best!  
+					</div>
+					<div class="mt-12">
+
+						<a href={`mailto:${emailAddress}`} class="" >
+							<button  type="button" 
+							class="button bg-[#A1E7D8] rounded-md
+							px-16 py-2
+							font-semibold text-[#123A31] text-base tracking-wider
+							hover:bg-[#80CBBD] 
+							active:bg-[#5DB1A5] 
+							" 
+							>{emailAddress}</button>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id='under-construction' 
+			class="bg-[url('./src/images/UC_Bg.png')] bg-auto h-[551px]
+				flex justify-between
+				">
+			<div id='UC-text' 
+					class="flex flex-col
+					mt-20 ml-12
+					">
+				
+				<h3 class="font-bold text-5xl text-[#4B2004] text-center">Our New Webiste is...</h3>
+				<h2 class="font-extrabold text-6xl text-[#4B2004] text-center
+					mt-6 ml-6
+				">Under Construction</h2>	
+				<h4 class="font-medium text-2xl text-[#92552D] text-center
+					mt-40
+				" >To Conact made by Mum, please email Kym at <br> </h4>
+				<span class="font-bold text-2xl text-[#864201] text-center
+					mt-6
+				" ><a href={`mailto:${emailAddress}`} class="hover:underline" >{emailAddress}</a></span>
+			</div>
+				
+			<div  class="flex justify-end items-end h-full">
+				<img src={workers_1} alt='construction workers ' class=""/>
+			</div>
+		</section>
+
+		<section id='discussion-1' class="text-center
+		 bg-white bg-[url('./src/images/pilon.png')] bg-no-repeat bg-left-bottom
+		 p-24 pb-28" >
+
+			<div class="text-[#979AAB] tracking-wide">THIS IS MADE BY MUM</div>
+			
+			<div>
+				<h2 class="text-[#2C2F30] font-normal text-5xl
+				mt-6
+				">Baby Food Reimagined.</h2>
+			</div>
+			<div  class="text-[#62777F] font-normal text-xl
+			mt-9
+			max-w-[800px] mx-auto
+			">
+				<p>Made by Mum is a Freeze Dry service for your own Breast Milk. 
+					Freeze dried and processed into 4 oz packages, your breast milk is easily reconstituted by simply 
+					adding the specified amount of water.<br/><br/>
+					The same process can also be used to freeze dry any baby food you 
+					make and would like to keep safe and portable for years.
+				</p>
+			</div>
+
+
+
+		</section>
+
+		<section id="workers-gallery" class=" ">
+			<div class="flex items-end bg-white">
+				<img src={workers_2} alt="workers_2" class="w-full"/>
+				<img src={workers_3} alt="workers_2" class="w-full"/>
+				<img src={workers_4} alt="workers_2" class="w-full"/>
+			</div>
+		</section>
+
+		
+	</main>
+	<Footer email={emailAddress}></Footer>	
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		font-family: 'Plus Jakarta Sans', sans-serif;
+	}
+	h1, h3 {
+		font-weight: 400;
+		font-family: 'Oleo Script', cursive;
+	}
+
+</style>
