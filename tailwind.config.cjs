@@ -7,7 +7,20 @@ module.exports = {
         'hero': "url('/images/bg.png')"
 				// 'hero-patter..n': "url('/img/hero-pattern.svg')",
       }
-		}
+		},
+		screens: {
+      
+			'lgMobile': '500px',
+			'tablet': '640px',
+      // => @media (min-width: 640px) { ... }
+			'middle': '800px',
+
+      'laptop': '1000px',
+      // => @media (min-width: 1024px) { ... }
+
+      'desktop': '1280px',
+      // => @media (min-width: 1280px) { ... }
+    },
 	},
 	plugins: [],
 }

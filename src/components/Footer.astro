@@ -6,21 +6,26 @@ const { email } = Astro.props;
 ---
 <section id='footer' class="" >
 
-  <div class="h-[260px] p-6 px-12
+  <div class="h-[260px] px-3 
   bg-[#263A40] bg-[url('/images/watermark.png')] bg-no-repeat bg-center
-  text-[#E9F6FA]  ">
+  text-[#E9F6FA]  
+  w-full flex flex-col 
+  tablet:p-6 tablet:px-12
+  ">
     
-    <div id='footer-logo'class="
-       
-        ">
-        <img src={footer_logo} alt="white_hero_logo " 
-          />
+    <div id='footer-logo'class="w-full  ">
+        <img src={footer_logo} alt="white_hero_logo" class="m-auto" />
     </div>
 
-    <div class="flex justify-between text-xl font-light px-3">
-      <div id='footer-location' class="">Located in Calgary, AB, Canada</div>
+    <div class=" 
+      text-center  text-base
+      font-light px-3 w-full
+      lgMobile:text-lg
+      tablet:flex tablet:justify-between 
+      ">
+      <div id='footer-location' class="mb-2">Located in Calgary, AB, Canada</div>
       <div id='footer-email '>
-        <a href={`mailto:${email}`} class="hover:underline hover:text-[#a8e0d4]" > {email}</a>
+        <a href={`mailto:${email}`} class="hover:underline hover:text-[#a8e0d4] " > {email}</a>
       </div>
     </div>
   </div>

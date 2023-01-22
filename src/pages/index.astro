@@ -1,13 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Footer from '../components/Footer.astro';
-import white_hero_logo from '../../public/images/white_hero_logo.png';
-import sachet from '../../public/images/sachet.png';
-import pinkHeart from '../../public/images/pinkHeart.png';
-import workers_1 from '../../public/images/workers_1.png';
-import workers_2 from '../../public/images/workers_2.png';
-import workers_3 from '../../public/images/workers_3.png';
-import workers_4 from '../../public/images/workers_4.png';
+import white_hero_logo from '/images/white_hero_logo.png';
+import sachet from '/images/sachet.png';
+import pinkHeart from '/images/pinkHeart.png';
+import workers_1 from '/images/workers_1.png';
+import workers_2 from '/images/workers_2.png';
+import workers_3 from '/images/workers_3.png';
+import workers_4 from '/images/workers_4.png';
 
 const emailAddress = 'hello@madebymum.me'
 ---
@@ -18,6 +18,13 @@ p-6 = 24px
 p-9 = 36px
 p-12 = 48px -->
 
+
+<!-- 
+'lgMobile': '500px',
+'tablet': '640px',
+'laptop': '1024px',
+'desktop': '1280px', -->
+
 <!-- Pink - e4bdb2
 Med green- 366656
 Teal - b9d1cc
@@ -26,95 +33,193 @@ Navy -263c44 -->
 
 <Layout title="made by Mum">
 	<main >
-		<section  id='hero' class="bg-hero bg-cover h-[732px] 	" >
-			<div id='hero-logo'class="
-				flex justify-center items-center
-				pt-12 w-full
+		<section  id='hero' 
+				class="bg-hero 
+				px-6 mt-0 pb-3
+				h-min
+				laptop:bg-cover
+				middle:bg-bottom
+					" >
+			<div id='logo'class="
+				flex justify-center items-start
+				w-full pt-3  
+				h-20
+				lgMobile:h-24
+				tablet: pt-6 tablet:h-32
+				desktop:h-36
 				">
-				<img src={white_hero_logo} alt="white_hero_logo " 
+				<img src={white_hero_logo} alt="white_hero_logo " class="h-full"
 					/>
 			</div>
 
-			<div id='hero-content' class="flex">
-				<div id='hero-sachet' class="h-[490px] w-1/3 ml-12 mt-12" >
-					<img src={sachet} alt="sachet" class="w-full h-full " />
+			<div id='hero-content' class="
+				mt-6 max-w-4/5 
+				grid grid-cols-[100px_minmax(100px,_1fr)_80px] 
+				h-min
+				 
+				
+				lgMobile:grid-cols-[minmax(150px,_200px)_minmax(100px,_1fr)_minmax(80px,_100px)] 
+					lgMobile:grid-rows-[auto_150px_auto]
+					lgMobile:mt-9
+					tablet:grid-cols-[250px_minmax(100px,_1fr)_80px]
+					tablet:grid-rows-[auto_max(200px)_auto]
+				middle:grid-cols-[300px_minmax(100px,_1fr)_120px]
+					middle:grid-rows-[1fr_auto_3fr]
+					middle:h-[400px]
+				laptop:grid-cols-[minmax(250px,_362px)_minmax(100px,_1fr)_150px]
+					laptop:h-[500px]	
+					laptop:grid-rows-[1fr_1fr_2fr] 
+					laptop:mt-20					
+				desktop:grid-cols-[362px_minmax(100px,_1fr)_150px] 
+					desktop:mt-16
+					desktop:grid-rows-[1fr_1fr_2fr] 
+				">
+				<!-- desktop:grid-rows-[150px_100px_auto]  -->
+
+				<div id='hero-sachet' 
+					class="
+					lgMobile:row-span-2
+					middle:row-span-3
+				">
+					<img src={sachet} alt="sachet" class=" object-contain" />
 				</div>
 
-				<div id='hero-texts' class="w-2/3 pl-9" >
-					<div id='hero-tagline' class="text-4xl font-bold 
-							mt-12 
-							flex" >
-						<div
-							class=" text-white mt-16"
-							>
-							<h1 id='hero' class="text-6xl tracking-widest">Freeze Dried with</h1> 
-						</div>
-						<img src={pinkHeart} alt="white_hero_logo " class="w-[120px] ml-3 mt-6"/>
-					</div>	
-					<div class="text-[#D2E5D9] text-xl w-[550px] ">
-						Your breast milk or your baby food!  Simply add water to reconstitute. 
-						Take it anywhere or give it family members or child-care, so that your baby can 
-						always have the very best!  
-					</div>
-					<div class="mt-12">
-
-						<a href={`mailto:${emailAddress}`} class="" >
-							<button  type="button" 
-							class="button bg-[#A1E7D8] rounded-md
-							px-16 py-2
-							font-semibold text-[#123A31] text-base tracking-wider
-							hover:bg-[#80CBBD] 
-							active:bg-[#5DB1A5] 
-							" 
-							>{emailAddress}</button>
-						</a>
-					</div>
+				<div class=" text-white 
+					mt-1 ml-3
+					tablet:mt-3
+					">
+					<h1 id='hero' class="
+						text-4xl tracking-widest 
+						lgMobile:text-5xl
+						tablet:text-5xl
+						middle:text-6xl
+						laptop:text-7xl
+						laptop:mt-12
+						laptop:mb-3
+						desktop:text-7xl 
+						
+						
+						">
+						Freeze Dried with
+					</h1> 
 				</div>
+					
+				<img src={pinkHeart} alt="white_hero_logo " 
+					class="
+						ml-0 mt-2
+						lgMobile:mt-0 lgMobile:ml-2
+						laptop:ml-[-20px]
+				" />
+					
+				<div class="text-[#D2E5D9] text-md whitespace-normal text-clip
+					col-span-3 min-w-min max-w-[550px] 
+					mt-3
+				 	lgMobile:mt-0 lgMobile:col-span-2 lgMobile:ml-3
+				 	tablet:text-lg  
+					middle:mt-3
+					laptop:max-w-[575px]
+					lalptop:text-xl laptop:font-semibold 
+					laptop:mt-0
+					
+					desktop:mt-0 
+				">
+					Your breast milk or your baby food!  Simply add water to reconstitute. 
+					Take it anywhere or give it family members or child-care, so that your baby can 
+					always have the very best!  
+				</div>
+
+				<div class="
+				col-span-3
+				w-4/5
+				m-auto mt-6 mb-3
+				tablet:w-3/5 tablet:col-span-3 tablet:m-auto
+				middle:col-span-2
+				middle:ml-3 middle:mt-12
+				laptop:w-1/2
+				laptop:mt-6
+				desktop:mt-6
+				">
+					<a href={`mailto:${emailAddress}`}  >
+						<button  type="button" 
+						class="button bg-[#A1E7D8] rounded-sm
+						px-6 py-3 
+						w-full				
+						drop-shadow-2xl
+						font-semibold text-[#123A31] text-base tracking-wider
+						hover:bg-[#80CBBD]  active:bg-[#5DB1A5] 
+						
+						
+						" 
+						>{emailAddress}</button>
+					</a>
+				</div>
+				<!-- </div> -->
 			</div>
 		</section>
 
 		<section id='under-construction' 
 			class="bg-[url('/images/UC_Bg.png')] bg-auto h-[551px]
-				flex justify-between
+				flex flex-col 
+				tablet:flex-row tablet:justify-between
 				">
 			<div id='UC-text' 
-					class="flex flex-col
-					mt-20 ml-12
+					class="flex flex-col justify-center 
+					w-full mt-6					
+					lgMobile:mt-9 
+					tablet:mt-20 
+					tablet:ml-12
 					">
 				
-				<h3 class="font-bold text-5xl text-[#4B2004] text-center">Our New Webiste is...</h3>
-				<h2 class="font-extrabold text-6xl text-[#4B2004] text-center
-					mt-6 ml-6
+				<h3 class="font-bold text-3xl 
+						text-[#4B2004] text-center m-auto
+						lgMobile:text-4xl 
+						">
+						Our New Webiste is...</h3>
+				<h2 class="
+					m-auto 
+					text-[#4B2004] text-center font-extrabold text-4xl 
+					lgMobile:text-5xl  
+					tablet:mt-6 
+					tablet:ml-6
 				">Under Construction</h2>	
-				<h4 class="font-medium text-2xl text-[#92552D] text-center
-					mt-40
-				" >To Conact made by Mum, please email Kym at <br> </h4>
-				<span class="font-bold text-2xl text-[#864201] text-center
-					mt-6
+				<h4 class="font-medium text-base  text-[#92552D] text-center
+					mt-6 mx-3 
+					lgMobile:mt-9 lgMobile:text-xl
+					tablet:mt-40 tablet:text-2xl
+					" >
+						To Conact made by Mum, please email Kym at <br> 
+				</h4>
+				<span class="font-bold text-base text-[#864201] text-center
+					mt-0
+					lgMobile:text-2xl 
+				
 				" ><a href={`mailto:${emailAddress}`} class="hover:underline" >{emailAddress}</a></span>
 			</div>
 				
 			<div  class="flex justify-end items-end h-full">
-				<img src={workers_1} alt='construction workers ' class=""/>
+				<img src={workers_1} alt='construction workers ' class="shrink mt-6 max-h-[300px]"/>
 			</div>
 		</section>
 
-		<section id='discussion-1' class="text-center
-		 bg-white bg-[url('/images/pilon.png')] bg-no-repeat bg-left-bottom
-		 p-24 pb-28" >
+		<section id='discussion-1' class="
+		bg-white bg-[url('/images/pilon.png')] bg-no-repeat bg-left-bottom
+			pt-9 px-12 pb-28 mt-3
+			text-center
+			tablet:p-24
+			" >
 
-			<div class="text-[#979AAB] tracking-wide">THIS IS MADE BY MUM2</div>
+			<div class="text-[#979AAB] tracking-wide">THIS IS MADE BY MUM</div>
 			
 			<div>
-				<h2 class="text-[#2C2F30] font-normal text-5xl
-				mt-6
+				<h2 class="text-[#2C2F30] font-normal text-3xl lgMobile:text-5xl 
+				mt-6 m-auto
 				">Baby Food Reimagined.</h2>
 			</div>
-			<div  class="text-[#62777F] font-normal text-xl
+			<div  class="text-[#48575e] font-normal text-base lgMobile:text-xl lgMobile:text-[#62777F]
 			mt-9
 			max-w-[800px] mx-auto
 			">
-				<p>Made by Mum is a Freeze Dry service for your own Breast Milk. 
+				<p class="">Made by Mum is a Freeze Dry service for your own Breast Milk. 
 					Freeze dried and processed into 4 oz packages, your breast milk is easily reconstituted by simply 
 					adding the specified amount of water.<br/><br/>
 					The same process can also be used to freeze dry any baby food you 
@@ -128,9 +233,9 @@ Navy -263c44 -->
 
 		<section id="workers-gallery" class=" ">
 			<div class="flex items-end bg-white">
-				<img src={workers_2} alt="workers_2" class="w-full"/>
+				<img src={workers_2} alt="workers_2" class="w-full hidden tablet:block"/>
 				<img src={workers_3} alt="workers_2" class="w-full"/>
-				<img src={workers_4} alt="workers_2" class="w-full"/>
+				<img src={workers_4} alt="workers_2" class="w-full hidden tablet:block"/>
 			</div>
 		</section>
 
@@ -142,6 +247,7 @@ Navy -263c44 -->
 <style>
 	main {
 		margin: auto;
+		min-width: 350px ;
 		font-family: 'Plus Jakarta Sans', sans-serif;
 	}
 	h1, h3 {
