@@ -32,7 +32,7 @@ Light teal - d2e5d9
 Navy -263c44 -->
 
 <Layout title="made by Mum">
-	<main >
+	<main class='w-full'>
 		<section  id='hero' 
 				class="bg-hero 
 				px-6 mt-0 pb-3
@@ -132,10 +132,11 @@ Navy -263c44 -->
 				col-span-3
 				w-4/5
 				m-auto mt-6 mb-3
-				tablet:w-3/5 tablet:col-span-3 tablet:m-auto
+				lgMobile:max-w-[400px] 
+				tablet:col-span-3 tablet:m-auto
 				middle:col-span-2
-				middle:ml-3 middle:mt-12
-				laptop:w-1/2
+				middle:ml-3 middle:mt-12 middle:w-[340px]
+				
 				laptop:mt-6
 				desktop:mt-6
 				">
@@ -158,52 +159,77 @@ Navy -263c44 -->
 		</section>
 
 		<section id='under-construction' 
-			class="bg-[url('/images/UC_Bg.png')] bg-auto h-[551px]
-				flex flex-col 
-				tablet:flex-row tablet:justify-between
+			class=" bg-[url('/images/UC_Bg.png')] bg-auto bg-bottom
+				flex flex-col
+				tablet:flex-row tablet:justify-between tablet:h-[450px] tablet:content-end tablet:items-end
+				tablet:pl-3
+				middle:pl-6 middle:justify-end
+				laptop:h-[550px]
 				">
 			<div id='UC-text' 
 					class="flex flex-col justify-center 
-					w-full mt-6					
-					lgMobile:mt-9 
-					tablet:mt-20 
-					tablet:ml-12
+					
+					pt-0 mt-0
+					tablet:mt-0 tablet:h-full tablet:justify-center 
+					lgMobile:mt-0
+					laptop:mt-0 laptop:justify-start  laptop:ml-12
 					">
 				
-				<h3 class="font-bold text-3xl 
-						text-[#4B2004] text-center m-auto
-						lgMobile:text-4xl 
+				<h3 class="font-bold text-2xl 
+						text-[#4B2004] text-center m-auto mt-9
+						whitespace-normal
+						tracking-wider
+						lgMobile:text-3xl
+						tablet:text-3xl tablet:mt-0 tablet:mb-0
+						middle:text-4xl
+						laptop:text-5xl laptop:mb-0 laptop:mt-20
 						">
 						Our New Webiste is...</h3>
 				<h2 class="
 					m-auto 
-					text-[#4B2004] text-center font-extrabold text-4xl 
-					lgMobile:text-5xl  
-					tablet:mt-6 
-					tablet:ml-6
+					whitespace-normal
+					text-[#4B2004] text-center font-extrabold text-3xl 
+					lgMobile:text-4xl
+					tablet:text-4xl  
+					tablet:mt-3 tablet:mb-0
+					middle:text-5xl
+					laptop:text-6xl laptop:font-extrabold laptop:mt-5 laptop:m-auto laptop:mb-0
 				">Under Construction</h2>	
 				<h4 class="font-medium text-base  text-[#92552D] text-center
 					mt-6 mx-3 
-					lgMobile:mt-9 lgMobile:text-xl
-					tablet:mt-40 tablet:text-2xl
+					lgMobile:mt-6 lgMobile:text-lg
+					tablet:text-lg tablet:mt-12
+					middle:text-xl
+					laptop:text-2xl laptop:mt-30
+
 					" >
 						To Conact made by Mum, please email Kym at <br> 
 				</h4>
 				<span class="font-bold text-base text-[#864201] text-center
 					mt-0
-					lgMobile:text-2xl 
+					lgMobile:text-xl
+					tablet:text-xl tablet:mt-3
+					middle:text-2xl
+					laptop:mt-3
 				
 				" ><a href={`mailto:${emailAddress}`} class="hover:underline" >{emailAddress}</a></span>
 			</div>
 				
-			<div  class="flex justify-end items-end h-full">
-				<img src={workers_1} alt='construction workers ' class="shrink mt-6 max-h-[300px]"/>
+			<div  class="self-end">
+				<img src={workers_1} alt='construction workers ' 
+				class="max-w-[350px] 
+				mt-3
+				float-right
+				tablet:self-end
+				middle:max-w-[450px]
+				laptop:max-w-min
+				"/>
 			</div>
 		</section>
 
 		<section id='discussion-1' class="
 		bg-white bg-[url('/images/pilon.png')] bg-no-repeat bg-left-bottom
-			pt-9 px-12 pb-28 mt-3
+			pt-9 px-12 pb-28 mt-0
 			text-center
 			tablet:p-24
 			" >
@@ -231,11 +257,11 @@ Navy -263c44 -->
 
 		</section>
 
-		<section id="workers-gallery" class=" ">
+		<section id="workers-gallery" class="">
 			<div class="flex items-end bg-white">
-				<img src={workers_2} alt="workers_2" class="w-full hidden tablet:block"/>
-				<img src={workers_3} alt="workers_2" class="w-full"/>
-				<img src={workers_4} alt="workers_2" class="w-full hidden tablet:block"/>
+				<img src={workers_2} alt="workers_2" class="min-w-0 w-full h-auto hidden tablet:block"/>
+				<img src={workers_3} alt="workers_2" class="min-w-0 w-full h-auto"/>
+				<img src={workers_4} alt="workers_2" class="min-w-0 w-full h-auto hidden laptop:block"/>
 			</div>
 		</section>
 
