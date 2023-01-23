@@ -35,7 +35,7 @@ Navy -263c44 -->
 	<main class='w-full'>
 		<section  id='hero' 
 				class="bg-hero 
-				px-6 mt-0 pb-3
+				px-6 mt-0 pb-6
 				h-min
 				laptop:bg-cover
 				middle:bg-bottom
@@ -52,74 +52,102 @@ Navy -263c44 -->
 					/>
 			</div>
 
+			<!-- grid-cols-[100px_minmax(100px,_1fr)_80px]  -->
+			<!-- grid-flow-col -->
+			<!-- grid-rows-[auto_150px_auto] -->
+			<!-- auto-cols -->
+			<!-- [200px_minmax(900px,_1fr)_100px] -->
+			
+			<!-- lgMobile:grid-cols-[minmax(150px,_200px)_minmax(100px,_1fr)_minmax(80px,_100px)] 
+			lgMobile:grid-rows-[auto_150px_auto]
+			lgMobile:mt-9 -->
+
+			<!-- _minmax(50px,_80px) -->
+
 			<div id='hero-content' class="
 				mt-6 max-w-4/5 
-				grid grid-cols-[100px_minmax(100px,_1fr)_80px] 
-				h-min
-				 
+				grid
 				
-				lgMobile:grid-cols-[minmax(150px,_200px)_minmax(100px,_1fr)_minmax(80px,_100px)] 
-					lgMobile:grid-rows-[auto_150px_auto]
-					lgMobile:mt-9
-					tablet:grid-cols-[250px_minmax(100px,_1fr)_80px]
-					tablet:grid-rows-[auto_max(200px)_auto]
+				grid-flow-row
+				grid-cols-[minmax(100px,_1fr)_3fr]
+				lgMobile:grid-cols-[minmax(200px,_1fr)_auto]
+
+				laptop:grid-cols-[362px_auto] 
+				laptop:grid-rows-[1fr_1fr_2fr]
+				laptop:mt-16 laptop:max-h-[500px]
+
+				
+
+				">
+				<!-- tablet:grid-cols-[minmax(200px,2fr)_3fr_minmax(80px,_100px)]
 				middle:grid-cols-[300px_minmax(100px,_1fr)_120px]
 					middle:grid-rows-[1fr_auto_3fr]
 					middle:h-[400px]
 				laptop:grid-cols-[minmax(250px,_362px)_minmax(100px,_1fr)_150px]
 					laptop:h-[500px]	
 					laptop:grid-rows-[1fr_1fr_2fr] 
-					laptop:mt-20					
-				desktop:grid-cols-[362px_minmax(100px,_1fr)_150px] 
-					desktop:mt-16
-					desktop:grid-rows-[1fr_1fr_2fr] 
-				">
-				<!-- desktop:grid-rows-[150px_100px_auto]  -->
-
-				<div id='hero-sachet' 
-					class="
+					laptop:mt-20				-->	
+			
+	
+				<img src={sachet} alt="sachet" 
+				class=" object-contain
 					lgMobile:row-span-2
 					middle:row-span-3
-				">
-					<img src={sachet} alt="sachet" class=" object-contain" />
-				</div>
+				" />
 
-				<div class=" text-white 
-					mt-1 ml-3
-					tablet:mt-3
-					">
+				<div class='flex justify-start items-center
+				lgMobile:items-start '>
+
 					<h1 id='hero' class="
-						text-4xl tracking-widest 
-						lgMobile:text-5xl
-						tablet:text-5xl
+						text-white
+						mt-0 ml-3 
+						tracking-widest leading-[1.15] text-dynamic break-words
+						self-center
+						lgMobile:self-start lgMobile:ml-0 
+						
+
+						tablet:mt-3
+						tablet:text-dynamic
 						middle:text-6xl
 						laptop:text-7xl
-						laptop:mt-12
+						laptop:mt-14 laptop:ml-3
 						laptop:mb-3
 						desktop:text-7xl 
-						
-						
 						">
 						Freeze Dried with
 					</h1> 
+					
+					<div class="max-w-[80px]
+						lgMobile:max-w-[90px]
+						laptop:max-w-[150px]
+						
+					" >
+						<img src={pinkHeart} alt="white_hero_logo " 
+						class="
+						min-w-0 w-full
+						ml-0 mt-2
+						lgMobile:mt-3 lgMobile:ml-0
+						laptop:mt-[-20px]
+					
+						" />
+					</div>
+					<div class='auto'></div>
 				</div>
 					
-				<img src={pinkHeart} alt="white_hero_logo " 
-					class="
-						ml-0 mt-2
-						lgMobile:mt-0 lgMobile:ml-2
-						laptop:ml-[-20px]
-				" />
-					
 				<div class="text-[#D2E5D9] text-md whitespace-normal text-clip
-					col-span-3 min-w-min max-w-[550px] 
+					col-span-2 min-w-min max-w-[550px] 
 					mt-3
-				 	lgMobile:mt-0 lgMobile:col-span-2 lgMobile:ml-3
+				 	lgMobile:mt-0 lgMobile:ml-0
+					lgMobile:col-start-2 lgMobile:col-span-1
+					lgMobile:row-start-2
+					
+
 				 	tablet:text-lg  
 					middle:mt-3
-					laptop:max-w-[575px]
-					lalptop:text-xl laptop:font-semibold 
-					laptop:mt-0
+					
+					laptop:text-xl laptop:font-semibold 
+					laptop:mt-0 laptop:ml-3
+					laptop:max-w-[592px] laptop:leading-8 
 					
 					desktop:mt-0 
 				">
@@ -129,16 +157,14 @@ Navy -263c44 -->
 				</div>
 
 				<div class="
-				col-span-3
-				w-4/5
-				m-auto mt-6 mb-3
-				lgMobile:max-w-[400px] 
-				tablet:col-span-3 tablet:m-auto
-				middle:col-span-2
-				middle:ml-3 middle:mt-12 middle:w-[340px]
-				
-				laptop:mt-6
-				desktop:mt-6
+					col-span-2
+					w-4/5 m-auto mt-6 mb-3
+					lgMobile:max-w-[400px] 
+					tablet:col-span-2 tablet:m-auto tablet:mt-6
+					middle:col-span-1
+					middle:ml-3 middle:mt-12 middle:w-[340px]
+					
+					laptop:mt-6 laptop:ml-3
 				">
 					<a href={`mailto:${emailAddress}`}  >
 						<button  type="button" 

@@ -3,6 +3,9 @@ module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
 		extend: {
+			fontSize: {
+				dynamic: "clamp(2rem, 7.5vw, 5rem)"
+      },
 			backgroundImage: {
         'hero': "url('/images/bg.png')"
 				// 'hero-patter..n': "url('/img/hero-pattern.svg')",
