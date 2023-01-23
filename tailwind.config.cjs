@@ -4,7 +4,7 @@ module.exports = {
 	theme: {
 		extend: {
 			fontSize: {
-				dynamic: "clamp(2rem, 7.5vw, 5rem)"
+				dynamic: "clamp(2.5rem, 7.5vw, 4rem)"
       },
 			backgroundImage: {
         'hero': "url('/images/bg.png')"

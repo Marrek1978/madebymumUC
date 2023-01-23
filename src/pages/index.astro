@@ -35,121 +35,85 @@ Navy -263c44 -->
 	<main class='w-full'>
 		<section  id='hero' 
 				class="bg-hero 
-				px-6 mt-0 pb-6
+				px-6 pb-9 mt-0 
 				h-min
 				laptop:bg-cover
-				middle:bg-bottom
 					" >
 			<div id='logo'class="
 				flex justify-center items-start
-				w-full pt-3  
-				h-20
+				w-full h-20 pt-3 
 				lgMobile:h-24
-				tablet: pt-6 tablet:h-32
-				desktop:h-36
+				tablet:h-32 tablet: pt-6 
+				laptop:h-36
 				">
 				<img src={white_hero_logo} alt="white_hero_logo " class="h-full"
 					/>
 			</div>
 
-			<!-- grid-cols-[100px_minmax(100px,_1fr)_80px]  -->
-			<!-- grid-flow-col -->
-			<!-- grid-rows-[auto_150px_auto] -->
-			<!-- auto-cols -->
-			<!-- [200px_minmax(900px,_1fr)_100px] -->
-			
-			<!-- lgMobile:grid-cols-[minmax(150px,_200px)_minmax(100px,_1fr)_minmax(80px,_100px)] 
-			lgMobile:grid-rows-[auto_150px_auto]
-			lgMobile:mt-9 -->
-
-			<!-- _minmax(50px,_80px) -->
-
 			<div id='hero-content' class="
-				mt-6 max-w-4/5 
+				max-w-4/5 mt-6
 				grid
-				
-				grid-flow-row
-				grid-cols-[minmax(100px,_1fr)_3fr]
-				lgMobile:grid-cols-[minmax(200px,_1fr)_auto]
+				grid-rows-[min_auto_min]
+				grid-cols-[auto_auto]
 
+				lgMobile:grid-cols-[minmax(175px,_1fr)_2fr]
+				tablet:grid-rows-[min_min_auto]
+				middle:max-h-[400px] middle:grid-rows-[1fr_1fr_2fr]
+				
+				laptop:max-h-[500px] laptop:mt-16 
 				laptop:grid-cols-[362px_auto] 
 				laptop:grid-rows-[1fr_1fr_2fr]
-				laptop:mt-16 laptop:max-h-[500px]
-
-				
 
 				">
-				<!-- tablet:grid-cols-[minmax(200px,2fr)_3fr_minmax(80px,_100px)]
-				middle:grid-cols-[300px_minmax(100px,_1fr)_120px]
-					middle:grid-rows-[1fr_auto_3fr]
-					middle:h-[400px]
-				laptop:grid-cols-[minmax(250px,_362px)_minmax(100px,_1fr)_150px]
-					laptop:h-[500px]	
-					laptop:grid-rows-[1fr_1fr_2fr] 
-					laptop:mt-20				-->	
-			
 	
 				<img src={sachet} alt="sachet" 
-				class=" object-contain
-					lgMobile:row-span-2
-					middle:row-span-3
+				class=" 
+					object-contain
+					hidden 
+					lgMobile:block lgMobile:row-span-3 
 				" />
 
-				<div class='flex justify-start items-center
-				lgMobile:items-start '>
+				<div class='flex 
+					w-full
+					col-span-2
+					lgMobile:col-span-1 lgMobile:items-start 
+					middle:self-end
+				'>
 
-					<h1 id='hero' class="
-						text-white
-						mt-0 ml-3 
-						tracking-widest leading-[1.15] text-dynamic break-words
-						self-center
-						lgMobile:self-start lgMobile:ml-0 
-						
-
-						tablet:mt-3
-						tablet:text-dynamic
-						middle:text-6xl
-						laptop:text-7xl
+					<h1 class="
+					pb-3
+						text-dynamic text-white tracking-widest leading-[1.15] break-words font-bold
+						tablet:mt-3  
 						laptop:mt-14 laptop:ml-3
-						laptop:mb-3
-						desktop:text-7xl 
+						
 						">
 						Freeze Dried with
 					</h1> 
 					
-					<div class="max-w-[80px]
-						lgMobile:max-w-[90px]
-						laptop:max-w-[150px]
-						
-					" >
+					<div class="
+						max-w-[80px]
+						lgMobile:max-w-[100px]
+						middle:max-w-[115px]
+						laptop:max-w-[134px] 
+					">
+
 						<img src={pinkHeart} alt="white_hero_logo " 
 						class="
-						min-w-0 w-full
-						ml-0 mt-2
-						lgMobile:mt-3 lgMobile:ml-0
-						laptop:mt-[-20px]
-					
+						min-w-0 w-full h-auto 
+						lgMobile:mt-3  
+						 laptop:justify-self-end laptop:self-center
 						" />
 					</div>
-					<div class='auto'></div>
+
 				</div>
 					
 				<div class="text-[#D2E5D9] text-md whitespace-normal text-clip
 					col-span-2 min-w-min max-w-[550px] 
-					mt-3
-				 	lgMobile:mt-0 lgMobile:ml-0
-					lgMobile:col-start-2 lgMobile:col-span-1
-					lgMobile:row-start-2
-					
-
-				 	tablet:text-lg  
-					middle:mt-3
-					
-					laptop:text-xl laptop:font-semibold 
-					laptop:mt-0 laptop:ml-3
-					laptop:max-w-[592px] laptop:leading-8 
-					
-					desktop:mt-0 
+					mt-0 pb-3
+					lgMobile:col-start-2 lgMobile:col-span-1 lgMobile:row-start-2
+				 	middle:text-lg middle:max-w-[592px] 
+					laptop:text-xl laptop:font-semibold laptop:leading-8 
+						laptop:mt-0 laptop:ml-3
 				">
 					Your breast milk or your baby food!  Simply add water to reconstitute. 
 					Take it anywhere or give it family members or child-care, so that your baby can 
@@ -158,19 +122,16 @@ Navy -263c44 -->
 
 				<div class="
 					col-span-2
-					w-4/5 m-auto mt-6 mb-3
+					w-4/5 m-auto mt-6 mb-0
 					lgMobile:max-w-[400px] 
-					tablet:col-span-2 tablet:m-auto tablet:mt-6
-					middle:col-span-1
-					middle:ml-3 middle:mt-12 middle:w-[340px]
-					
-					laptop:mt-6 laptop:ml-3
+					tablet:max-w-[350px]
+						tablet:col-span-1 tablet:ml-0  
+					laptop:ml-3
 				">
 					<a href={`mailto:${emailAddress}`}  >
 						<button  type="button" 
 						class="button bg-[#A1E7D8] rounded-sm
-						px-6 py-3 
-						w-full				
+						w-full				px-6 py-3 	
 						drop-shadow-2xl
 						font-semibold text-[#123A31] text-base tracking-wider
 						hover:bg-[#80CBBD]  active:bg-[#5DB1A5] 
@@ -297,6 +258,9 @@ Navy -263c44 -->
 </Layout>
 
 <style>
+	*, h1, h2, h3, h4, h5, h6{
+		padding: 0;
+	}
 	main {
 		margin: auto;
 		min-width: 350px ;
